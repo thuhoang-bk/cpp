@@ -1,14 +1,14 @@
 #include <iostream>
 #include <vector>
 
-#define MAXN  100001
+#define MAXN 100001
 
 using namespace std;
 
 void merge(int a[], int l, int mid, int r) {
 	int l1 = mid - l + 1, l2 = r - mid;
 	vector<int> b(l1), c(l2);
-	for (int i=0; i<l1; ++i) b[i] = a[l+i]; 
+	for (int i=0; i<l1; ++i) b[i] = a[l+i];
 	for (int i=0; i<l2; ++i) c[i] = a[mid+1+i];
 	int cs1=0, cs2=0, count=0;
 	while ((cs1<l1) && (cs2<l2)) {
